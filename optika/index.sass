@@ -142,41 +142,26 @@ body
 
 @media screen and (max-width: 1000px)
     .slider
-        height: 352px
-        overflow: hidden
-        img                 
-            background-size: contain
-        .label
-            position: absolute
-            top: 580px
-            left: 650px
-        .left 
-            border-radius: 50%
-            height: 40px
-            width: 40px
-            background-color: $green
         
-        .right 
-            border-radius: 50%
-            height: 40px
-            width: 40px
-            background-color: $green
-            position: absolute
-            top: 350px
-            left: 1300px
-            right: 0
-        .gift
-            position: absolute
+        
+        img                 
+            background-size: cover
+            min-width: 940px
+        .label
             display: none
+            
 
 .slider
-    height: 483px
-    overflow: hidden
-    img 
-        width: 100%
-        height: auto
-        background-size: 1366px
-        background-repeat: no-repeat
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100%
+    display: grid
+    grid-template-columns: 40px 452px 40px
+    grid-template-rows: 180px
+    justify-content: space-between
+    padding-top: 210px
+    padding-bottom: 50px
+    
     .label
         position: absolute
         top: 580px
@@ -200,8 +185,7 @@ body
         height: 40px
         width: 40px
         background-color: $green
-        position: absolute
-        
+       
         .arrow     
             position: relative 
             left: 15px
@@ -222,10 +206,7 @@ body
         height: 40px
         width: 40px
         background-color: $green
-        position: absolute
-        top: 350px
-        left: 1300px
-        right: 0
+
         .arrow     
             position: relative 
             left: 10px
@@ -246,9 +227,7 @@ body
         height: 128px
         background-color: #7445a0
         opacity: 0.8
-        position: absolute
-        top: 55%
-        left: 32%
+        
       
         h2:first-child 
             padding-top: 5px
@@ -354,107 +333,7 @@ body
                     font-family: "Noto Serif"
                     font-size: 30px
                     font-weight: 700
-//header
-@media screen and (max-width: 1000px)
-    .header
-        max-width: 882px 
-        .position
-            justify-items: right
-            display: grid
-            grid-template-columns: 160px
-            grid-gap: 0px
-            .location
-                display: none
-    .nav-bar
-        max-width: 882px
-//advanteges
-@media screen and (max-width: 1000px)
-    .advantages
-        .title
-        .advantages-wrapper
-            grid-template-columns: repeat(4, 200px)
-            .item
-                p 
-                    margin: 0
-                    width: 200px
-                    color: #555555
-                    font-family: Roboto
-                    font-size: 18px
-                img    
-                    height: 150px
-                    width: 150px
-//sentenc
-@media screen and (max-width: 1000px)
-    .sentence
-        .sentence-wrapper
-            display: grid
-            grid-template-columns: repeat(2, 50%)
-            grid-template-rows: repeat(3, 281px)
-            .item
-                .container:hover
-                    p
-                        position: relative
-                        left: -9999px
-                        overflow: hidden
-                    span:first-child
-                        font-size: 20px
-                        margin-left: 100px
-                        border-bottom: 2px solid #ffffff
-                        color: #ffffff
-                        margin-bottom: 5px
-                        width: 65px
-                    span 
-                        font-size: 18px
-                        position: relative
-                        left: 33px
-                        top: -95px
-                        span
-                            margin-left: 40px
-                            display: block       
-                .container
-                    height: 281px
-                    overflow: hidden
-                    span 
-                        position: relative
-                        left: -9999px
-                        color: #ffffff
-                        font-family: Roboto
-                        font-size: 16px
-                        font-weight: 400
-                        line-height: 24px
-                p 
-                    margin: 0
-                    padding-top: 226px
-                    text-align: center
-
-                    height: 55px
-                    color: #ffffff
-                    font-family: "Noto Serif"
-                    font-size: 30px
-                    font-weight: 700
-//запрос для about
-@media screen and (max-width: 1000px)
-    .about 
-        max-width: 1000px
-        .about-wrapper
-            grid-template-columns: 400px 400px
-            .img   
-                background-size: 100%   
-            .text 
-                p 
-                    font-size: 16px
-//запрос для table
-@media screen and (max-width: 1000px)
-    .table
-        .wrapper
-            p 
-                text-align: center
-                margin: 0
-                color: #555555
-                font-family: Roboto
-                font-size: 37px
-                font-weight: 700
-                text-transform: uppercase
+          
 
 
 
@@ -672,3 +551,129 @@ footer
                 line-height: 1.5em
 
 
+//header
+@media screen and (max-width: 1000px)
+    .header
+        max-width: 882px 
+        .position
+            justify-items: right
+            display: grid
+            grid-template-columns: 160px
+            grid-gap: 0px
+            .location
+                display: none
+    .nav-bar
+        max-width: 882px
+//advanteges
+@media screen and (max-width: 1000px)
+    .advantages
+        .title
+        .advantages-wrapper
+            grid-template-columns: repeat(4, 200px)
+            .item
+                p 
+                    margin: 0
+                    width: 200px
+                    color: #555555
+                    font-family: Roboto
+                    font-size: 18px
+                img    
+                    height: 150px
+                    width: 150px
+//sentenc
+@media screen and (max-width: 1000px)
+    .sentence
+        .sentence-wrapper
+            display: grid
+            grid-template-columns: repeat(2, 50%)
+            grid-template-rows: repeat(3, 281px)
+            .item
+                .container:hover
+                    p
+                        position: relative
+                        left: -9999px
+                        overflow: hidden
+                    span:first-child
+                        font-size: 20px
+                        margin-left: 100px
+                        border-bottom: 2px solid #ffffff
+                        color: #ffffff
+                        margin-bottom: 5px
+                        width: 65px
+                    span 
+                        font-size: 18px
+                        position: relative
+                        left: 33px
+                        top: -95px
+                        span
+                            margin-left: 40px
+                            display: block       
+                .container
+                    height: 281px
+                    overflow: hidden
+                    span 
+                        position: relative
+                        left: -9999px
+                        color: #ffffff
+                        font-family: Roboto
+                        font-size: 16px
+                        font-weight: 400
+                        line-height: 24px
+                p 
+                    margin: 0
+                    padding-top: 226px
+                    text-align: center
+
+                    height: 55px
+                    color: #ffffff
+                    font-family: "Noto Serif"
+                    font-size: 30px
+                    font-weight: 700
+//запрос для about
+@media screen and (max-width: 1000px)
+    .about 
+        max-width: 1000px
+        .about-wrapper
+            grid-template-columns: 400px 350px
+            grid-gap: 10px
+            .img   
+                background-size: 100%   
+            .text 
+                width: 400px
+                p 
+                    margin: 0
+                    font-size: 16px
+                    width: 400px
+//запрос для table
+@media screen and (max-width: 1000px)
+    .table
+        .wrapper
+            p 
+                text-align: center
+                margin: 0
+                color: #555555
+                font-family: Roboto
+                font-size: 37px
+                font-weight: 700
+                text-transform: uppercase
+
+@media screen and (max-width: 1000px)
+    .slider
+        
+        
+        img                 
+            background-size: cover
+            min-width: 940px
+        .label
+            display: none
+//запрос для slider          
+@media screen and (max-width: 1000px)
+    .slider
+        
+        
+        img                 
+            background-size: cover
+            min-width: 940px
+        .label
+            display: none
+  
