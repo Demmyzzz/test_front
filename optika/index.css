@@ -228,8 +228,9 @@ body {
     line-height: 36px;
     text-align: center; }
   .advantages .advantages-wrapper .item img {
+    padding-left: 25px;
     height: 150px;
-    width: 150px; }
+    width: 150px11; }
 
 .sentence .title p {
   text-align: center;
@@ -552,7 +553,9 @@ footer {
       grid-template-columns: 400px 350px;
       grid-gap: 10px; }
       .about .about-wrapper .img {
-        background-size: 100%; }
+        background-size: 100%;
+        max-width: 400px;
+        height: auto; }
       .about .about-wrapper .text {
         width: 400px; }
         .about .about-wrapper .text p {
@@ -567,8 +570,8 @@ footer {
     font-family: Roboto;
     font-size: 37px;
     font-weight: 700;
-    text-transform: uppercase; } }
-@media screen and (max-width: 1000px) {
+    text-transform: uppercase; }
+
   .slider img {
     background-size: cover;
     min-width: 940px; }

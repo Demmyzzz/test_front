@@ -269,8 +269,9 @@ body
                 line-height: 36px
                 text-align: center
             img    
+                padding-left: 25px
                 height: 150px
-                width: 150px
+                width: 150px11
 
 //блок sentence ( предложения )
 //
@@ -637,7 +638,9 @@ footer
             grid-template-columns: 400px 350px
             grid-gap: 10px
             .img   
-                background-size: 100%   
+                background-size: 100%  
+                max-width: 400px
+                height: auto 
             .text 
                 width: 400px
                 p 
@@ -657,7 +660,6 @@ footer
                 font-weight: 700
                 text-transform: uppercase
 
-@media screen and (max-width: 1000px)
     .slider
         
         
@@ -669,8 +671,6 @@ footer
 //запрос для slider          
 @media screen and (max-width: 1000px)
     .slider
-        
-        
         img                 
             background-size: cover
             min-width: 940px
