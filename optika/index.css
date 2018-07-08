@@ -3,7 +3,7 @@ body {
   padding: 0; }
 
 .header {
-  width: 1130px;
+  width: 85%;
   display: grid;
   grid-template-columns: minmax(auto, 190px) minmax(auto, 400px) minmax(auto, 290px);
   grid-template-rows: 45px;
@@ -97,15 +97,15 @@ body {
 .nav-bar {
   width: 1130px;
   margin: 0 auto; }
-  .nav-bar ul {
+  .nav-bar .drop ul {
     display: grid;
     grid-template-columns: 0.7fr 0.75fr 1fr 1.1fr 1.1fr 0.75fr; }
-    .nav-bar ul li {
+    .nav-bar .drop ul li {
       justify-items: center;
       list-style: none; }
-      .nav-bar ul li a:hover {
+      .nav-bar .drop ul li a:hover {
         color: #7445a0; }
-      .nav-bar ul li a {
+      .nav-bar .drop ul li a {
         text-decoration: none;
         color: black;
         width: 1055px;
@@ -116,13 +116,22 @@ body {
         font-weight: 700;
         line-height: 20px;
         color: #555555; }
+  .nav-bar .btn {
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    border-top: 1px solid #1a9f29;
+    border-bottom: 1px solid #1a9f29;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #555555;
+    font-weight: 700;
+    display: none; }
 
-@media screen and (max-width: 1000px) {
-  .slider img {
-    background-size: cover;
-    min-width: 940px; }
-  .slider .label {
-    display: none; } }
 .slider {
   background-size: cover;
   background-repeat: no-repeat;
@@ -240,11 +249,12 @@ body {
   font-weight: 700; }
 .sentence .sentence-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 449.5px);
+  grid-template-columns: repeat(3, 33.33%);
   grid-template-rows: repeat(2, 281px); }
   .sentence .sentence-wrapper .item {
     box-shadow: inset 0px -48px 110px #555555;
-    background-size: 100%; }
+    background-size: 100%;
+    background-repeat: no-repeat; }
     .sentence .sentence-wrapper .item .container:hover {
       background-color: black;
       opacity: 0.8;
@@ -345,8 +355,8 @@ body {
       font-size: 24px;
       font-weight: 700; }
 
-.table .wrapper {
-  height: 490px; }
+.table .wrapper img {
+  width: 100%; }
 .table p {
   text-align: center;
   margin: 0;
@@ -365,8 +375,6 @@ body {
   grid-template-rows: 455px;
   justify-content: right; }
   .feed .form-wrapper form {
-    width: 555px;
-    height: 435px;
     background-color: #7445a0;
     opacity: 0.8;
     padding-top: 20px; }
@@ -419,7 +427,7 @@ footer {
   footer .wrapper {
     padding-top: 45px;
     display: grid;
-    grid-template-columns: 220px 120px 130px 260px;
+    grid-template-columns: 220px 120px 130px 240px;
     justify-content: space-around; }
     footer .wrapper .about-us .logo {
       display: grid;
@@ -474,12 +482,12 @@ footer {
         width: 120px;
         color: #555555;
         margin: 0; }
-      footer .wrapper .created-by img {
+      footer .wrapper .created-by .container img {
         line-height: 1.5em; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .header {
-    max-width: 882px; }
+    width: 882px; }
     .header .position {
       justify-items: right;
       display: grid;
@@ -489,8 +497,8 @@ footer {
         display: none; }
 
   .nav-bar {
-    max-width: 882px; } }
-@media screen and (max-width: 1000px) {
+    max-width: 768px; } }
+@media screen and (max-width: 1024px) {
   .advantages .advantages-wrapper {
     grid-template-columns: repeat(4, 200px); }
     .advantages .advantages-wrapper .item p {
@@ -502,7 +510,7 @@ footer {
     .advantages .advantages-wrapper .item img {
       height: 150px;
       width: 150px; } }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .sentence .sentence-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -546,7 +554,7 @@ footer {
       font-family: "Noto Serif";
       font-size: 30px;
       font-weight: 700; } }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .about {
     max-width: 1000px; }
     .about .about-wrapper {
@@ -562,7 +570,7 @@ footer {
           margin: 0;
           font-size: 16px;
           width: 400px; } }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .table .wrapper p {
     text-align: center;
     margin: 0;
@@ -570,18 +578,166 @@ footer {
     font-family: Roboto;
     font-size: 37px;
     font-weight: 700;
-    text-transform: uppercase; }
+    text-transform: uppercase; } }
+@media screen and (max-width: 1024px) {
+  .slider img {
+    background-size: cover;
+    min-width: 940px; }
+  .slider .label {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  html {
+    padding: 0;
+    margin: 0; }
 
-  .slider img {
-    background-size: cover;
-    min-width: 940px; }
-  .slider .label {
-    display: none; } }
-@media screen and (max-width: 1000px) {
-  .slider img {
-    background-size: cover;
-    min-width: 940px; }
-  .slider .label {
-    display: none; } }
+  body {
+    margin: 0;
+    padding: 0; }
+
+  .header {
+    width: 80%;
+    grid-template-columns: 190px;
+    justify-content: center;
+    border: none; }
+    .header .text {
+      display: none; }
+    .header .position {
+      display: none; }
+
+  .nav-bar .btn {
+    display: block; }
+  .nav-bar .drop ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; }
+    .nav-bar .drop ul li {
+      margin: 1px;
+      background-color: #555555;
+      padding: 10px;
+      width: 250px; }
+      .nav-bar .drop ul li a {
+        color: #ffffff; }
+
+  .advantages .advantages-wrapper {
+    grid-template-columns: repeat(2, 200px); }
+
+  .sentence .sentence-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(6, 281px); }
+
+  .about {
+    height: 500px; }
+    .about .about-wrapper {
+      grid-template-columns: 500px;
+      justify-items: center; }
+      .about .about-wrapper .img {
+        display: none; }
+      .about .about-wrapper .text .title {
+        margin: 0;
+        padding: 0;
+        text-align: center; }
+      .about .about-wrapper .text p {
+        margin: 0;
+        padding: 5px 0 5px 0;
+        text-align: center;
+        width: 100%;
+        line-height: 22px;
+        font-size: 18px; }
+      .about .about-wrapper .text .btn {
+        width: 100%; }
+
+  .info .info-wrapper {
+    grid-template-columns: repeat(3, 31.5%);
+    grid-gap: 3%; }
+    .info .info-wrapper .item h1 {
+      font-size: 60px; }
+
+  .lens {
+    font-size: 20px; }
+
+  .feed .form-wrapper {
+    padding-right: 20px; }
+
+  footer {
+    height: auto;
+    padding: 10px; }
+    footer .wrapper {
+      grid-template-columns: 220px 120px 130px;
+      grid-gap: 20px; }
+      footer .wrapper .nav-two {
+        width: 120px; }
+      footer .wrapper .created-by {
+        grid-template-columns: 120px 130px; }
+        footer .wrapper .created-by p {
+          line-height: 2.5em; }
+        footer .wrapper .created-by .container {
+          display: grid;
+          grid-template-columns: 40px 90px; }
+          footer .wrapper .created-by .container a {
+            line-height: 2.5em; } }
+@media screen and (max-width: 480px) {
+  #menu {
+    width: 400px;
+    overflow: hidden;
+    top: 140px; }
+    #menu li {
+      width: 250px;
+      overflow: hidden; }
+
+  .slider {
+    display: none; }
+
+  .advantages {
+    margin-top: 60px; }
+    .advantages .title p {
+      font-size: 36px; }
+    .advantages .advantages-wrapper {
+      grid-template-columns: 200px; }
+
+  .about .about-wrapper {
+    grid-template-columns: 440px;
+    justify-items: center; }
+    .about .about-wrapper p {
+      width: 390px;
+      height: auto; }
+    .about .about-wrapper .btn {
+      width: 300px; }
+
+  .info {
+    margin-top: 20px; }
+    .info .info-wrapper {
+      grid-template-columns: repeat(3, 30%); }
+      .info .info-wrapper .item h1 {
+        font-size: 32px;
+        width: 135px; }
+      .info .info-wrapper .item p {
+        font-size: 20px;
+        width: 135px; }
+
+  .feed .form-wrapper {
+    padding: 0;
+    margin: 0;
+    justify-items: right; }
+    .feed .form-wrapper form {
+      margin: 0;
+      opacity: 0.9;
+      width: 80%; }
+      .feed .form-wrapper form input {
+        width: 80%; }
+      .feed .form-wrapper form textarea {
+        width: 80%; }
+      .feed .form-wrapper form .container {
+        grid-template-columns: 10px 200px 155px; }
+        .feed .form-wrapper form .container p {
+          width: 200px; }
+        .feed .form-wrapper form .container .btn {
+          margin: 0; }
+
+  footer .wrapper {
+    grid-template-columns: 220px; } }
 
 /*# sourceMappingURL=index.css.map */

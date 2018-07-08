@@ -15,7 +15,7 @@ body
 //   - phone ( ?номер телефона? )
 
 .header 
-    width: 1130px
+    width: 85%
     display: grid
     grid-template-columns: minmax(auto ,190px) minmax(auto, 400px) minmax(auto, 290px)
     grid-template-rows: 45px
@@ -112,26 +112,42 @@ body
 .nav-bar
     width: 1130px
     margin: 0 auto
-    ul 
-        display: grid
-        grid-template-columns: 0.7fr 0.75fr 1fr 1.1fr 1.1fr 0.75fr
-        li
-            
-            justify-items: center
-            list-style: none
-            a:hover 
-                color: #7445a0
-            a 
-                text-decoration: none
-                color: black
-                width: 1055px
-                height: 17px
-                color: #555555
-                font-family: "Noto Serif"
-                font-size: 18px
-                font-weight: 700
-                line-height: 20px
-                color: #555555
+    .drop
+        ul 
+            display: grid
+            grid-template-columns: 0.7fr 0.75fr 1fr 1.1fr 1.1fr 0.75fr
+            li
+                
+                justify-items: center
+                list-style: none
+                a:hover 
+                    color: #7445a0
+                a 
+                    text-decoration: none
+                    color: black
+                    width: 1055px
+                    height: 17px
+                    color: #555555
+                    font-family: "Noto Serif"
+                    font-size: 18px
+                    font-weight: 700
+                    line-height: 20px
+                    color: #555555
+    .btn
+        width: 100%
+        background-color: #fff
+        color: black
+        position: absolute
+        border-top: 1px solid $green
+        border-bottom: 1px solid $green
+        padding-top: 10px
+        padding-bottom: 10px
+        text-align: center
+        margin-bottom: 10px
+        font-size: 24px
+        color: #555555
+        font-weight: 700
+        display: none
 
 // slider (coomig soon)
 // не работающий слайдер с одной картинкой 
@@ -139,17 +155,6 @@ body
 // блок arrow это кнопки на слайдере 
 // блок box точки с низу слайдера показывающие позицию
 // блок gift текст на слайдере
-
-@media screen and (max-width: 1000px)
-    .slider
-        
-        
-        img                 
-            background-size: cover
-            min-width: 940px
-        .label
-            display: none
-            
 
 .slider
     background-size: cover
@@ -286,11 +291,12 @@ body
             font-weight: 700
     .sentence-wrapper
         display: grid
-        grid-template-columns: repeat(3, 449.5px)
+        grid-template-columns: repeat(3, 33.33%)
         grid-template-rows: repeat(2, 281px)
         .item
             box-shadow: inset 0px -48px 110px #555555
             background-size: 100%
+            background-repeat: no-repeat
             .container:hover
                 background-color: black
                 opacity: .8
@@ -405,7 +411,8 @@ body
 
 .table
     .wrapper
-        height: 490px
+        img 
+            width: 100%
     p 
         text-align: center
         margin: 0
@@ -422,7 +429,6 @@ body
 
 .feed
     .form-wrapper
-        
         margin-top: 130px
         padding-right: 150px
         padding-top: 40px
@@ -431,8 +437,7 @@ body
         grid-template-rows: 455px
         justify-content: right
         form 
-            width: 555px
-            height: 435px
+            
             background-color: #7445a0
             opacity: 0.8
             padding-top: 20px
@@ -488,7 +493,7 @@ footer
     .wrapper
         padding-top: 45px
         display: grid
-        grid-template-columns: 220px 120px 130px 260px
+        grid-template-columns: 220px 120px 130px 240px
         justify-content: space-around
         .about-us
             .logo
@@ -546,16 +551,17 @@ footer
                 width: 120px
                 color: #555555
                 margin: 0
-            a 
-                
-            img 
-                line-height: 1.5em
+            .container
+                img 
+                    line-height: 1.5em
 
 
 //header
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1024px)
     .header
-        max-width: 882px 
+        
+        width: 882px
+
         .position
             justify-items: right
             display: grid
@@ -564,9 +570,10 @@ footer
             .location
                 display: none
     .nav-bar
-        max-width: 882px
+        max-width: 768px
+
 //advanteges
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1024px)
     .advantages
         .title
         .advantages-wrapper
@@ -582,7 +589,7 @@ footer
                     height: 150px
                     width: 150px
 //sentenc
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1024px)
     .sentence
         .sentence-wrapper
             display: grid
@@ -631,7 +638,7 @@ footer
                     font-size: 30px
                     font-weight: 700
 //запрос для about
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1024px)
     .about 
         max-width: 1000px
         .about-wrapper
@@ -648,7 +655,7 @@ footer
                     font-size: 16px
                     width: 400px
 //запрос для table
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1024px)
     .table
         .wrapper
             p 
@@ -660,16 +667,8 @@ footer
                 font-weight: 700
                 text-transform: uppercase
 
-    .slider
-        
-        
-        img                 
-            background-size: cover
-            min-width: 940px
-        .label
-            display: none
 //запрос для slider          
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1024px)
     .slider
         img                 
             background-size: cover
@@ -677,3 +676,176 @@ footer
         .label
             display: none
   
+//телефон 
+
+// 768px
+@media screen and (max-width: 768px)
+    html 
+        padding: 0
+        margin: 0
+    body 
+        margin: 0 
+        padding: 0
+    .header
+        width: 80%
+        grid-template-columns: 190px 
+        justify-content: center
+        border: none
+        
+        .logo
+            
+        .text
+            display: none
+        .position
+            display: none
+    .nav-bar
+        .btn
+            display: block
+        .drop
+            ul 
+                margin: 0
+                padding: 0
+                position: absolute
+                top: 0
+                left: 0
+                display: none
+                li                   
+                    margin: 1px
+                    background-color: #555555
+                    padding: 10px
+                    width: 250px
+                    a 
+                        color: #ffffff               
+    .advantages
+        .advantages-wrapper
+            grid-template-columns: repeat(2, 200px)
+
+    .sentence
+        .sentence-wrapper
+            display: grid
+            grid-template-columns: repeat(1, 100%)
+            grid-template-rows: repeat(6, 281px)
+    .about
+        height: 500px
+        .about-wrapper
+            grid-template-columns: 500px
+            justify-items: center
+            .img
+                display: none
+            .text
+                .title
+                    margin: 0
+                    padding: 0
+                    text-align: center
+                p 
+                    margin: 0 
+                    padding: 5px 0 5px 0 
+                    text-align: center
+                    width: 100%
+                    line-height: 22px
+                    font-size: 18px
+                .btn
+                    width: 100%
+    .info
+        .info-wrapper
+            grid-template-columns: repeat(3, 31.5%)
+            grid-gap: 3%
+            .item
+                h1 
+                    font-size: 60px
+    .lens
+        font-size: 20px     
+    .feed
+        .form-wrapper
+            padding-right: 20px
+    footer 
+        height: auto
+        padding: 10px
+        .wrapper
+            grid-template-columns: 220px 120px 130px
+            grid-gap: 20px
+           
+            .nav-two
+                width: 120px
+            .created-by
+                grid-template-columns: 120px 130px
+                p 
+                    line-height: 2.5em
+                .container
+                    display: grid
+                    grid-template-columns: 40px 90px
+                    a 
+                        line-height: 2.5em
+
+@media screen and (max-width: 480px)
+    #menu 
+        width: 400px
+        overflow: hidden
+        top: 140px
+        li
+            width: 250px
+            overflow: hidden
+    .slider
+        display: none
+    .advantages
+        margin-top: 60px
+        .title
+            p  
+                font-size: 36px
+        .advantages-wrapper
+            grid-template-columns: 200px
+    .about 
+        .about-wrapper
+            
+            grid-template-columns: 440px
+            justify-items: center
+            p 
+                width: 390px
+                height: auto
+            .btn 
+                width: 300px
+    .info
+        margin-top: 20px
+        .info-wrapper
+            grid-template-columns: repeat(3, 30%)
+            .item
+                h1 
+                    font-size: 32px
+                    width: 135px
+                p 
+                    font-size: 20px
+                    width: 135px
+    .feed
+        .form-wrapper
+            padding: 0
+            margin: 0
+            justify-items: right
+            form
+                margin: 0
+                opacity: 0.9
+                width: 80%
+                input 
+                    width: 80%
+                textarea
+                    width: 80%
+                .container
+                    grid-template-columns: 10px 200px 155px
+                    p 
+                        width: 200px
+                    .btn
+                        margin: 0
+    footer 
+        .wrapper
+            grid-template-columns: 220px
+                        
+
+                
+
+                
+            
+
+
+                
+            
+    
+        
