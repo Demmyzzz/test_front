@@ -337,7 +337,7 @@ body {
   display: grid;
   grid-template-columns: 250px 200px 240px;
   grid-template-rows: 280px;
-  grid-gap: 100px;
+  grid-gap: 35px;
   justify-content: center; }
   .info .info-wrapper .item {
     padding-top: 50px; }
@@ -380,16 +380,19 @@ body {
     padding-top: 20px; }
     .feed .form-wrapper form h1 {
       color: #fff;
-      margin: 0 40px 0 40px; }
+      margin: 0 40px 0;
+      margin-right: 0; }
     .feed .form-wrapper form input {
-      margin: 0 40px 0 40px;
+      margin: 0 40px 0;
+      margin-right: 0;
       margin-top: 15px;
       border: 1px solid black;
       border-radius: 2px;
       width: 475px;
       height: 35px; }
     .feed .form-wrapper form textarea {
-      margin: 0 40px 0 40px;
+      margin: 0 40px 0;
+      margin-right: 0;
       margin-top: 15px;
       border: 1px solid black;
       border-radius: 2px;
@@ -486,21 +489,24 @@ footer {
         line-height: 1.5em; }
 
 @media screen and (max-width: 1024px) {
-  .header {
-    width: 882px; }
-    .header .position {
-      justify-items: right;
-      display: grid;
-      grid-template-columns: 160px;
-      grid-gap: 0px; }
-      .header .position .location {
-        display: none; }
+  .header .position {
+    justify-items: right;
+    display: grid;
+    grid-template-columns: 160px;
+    grid-gap: 0px; }
+    .header .position .location {
+      display: none; }
 
   .nav-bar {
     max-width: 768px; } }
+@media screen and (max-width: 900px) {
+  .header {
+    grid-template-columns: minmax(auto, 190px) minmax(auto, 400px); }
+    .header .position .phone {
+      display: none; } }
 @media screen and (max-width: 1024px) {
   .advantages .advantages-wrapper {
-    grid-template-columns: repeat(4, 200px); }
+    grid-template-columns: repeat(2, 200px); }
     .advantages .advantages-wrapper .item p {
       margin: 0;
       width: 200px;
@@ -565,11 +571,11 @@ footer {
         max-width: 400px;
         height: auto; }
       .about .about-wrapper .text {
-        width: 400px; }
+        width: 350px; }
         .about .about-wrapper .text p {
           margin: 0;
           font-size: 16px;
-          width: 400px; } }
+          width: 350px; } }
 @media screen and (max-width: 1024px) {
   .table .wrapper p {
     text-align: center;
@@ -621,6 +627,16 @@ footer {
       .nav-bar .drop ul li a {
         color: #ffffff; }
 
+  .slider {
+    grid-template-columns: 40px 370px 40px;
+    grid-gap: 6px; }
+    .slider .gift {
+      width: 86%; }
+      .slider .gift h1 {
+        font-size: 28px; }
+      .slider .gift h2 {
+        font-size: 22px; }
+
   .advantages .advantages-wrapper {
     grid-template-columns: repeat(2, 200px); }
 
@@ -632,26 +648,30 @@ footer {
   .about {
     height: 500px; }
     .about .about-wrapper {
-      grid-template-columns: 500px;
+      grid-template-columns: 450px;
       justify-items: center; }
       .about .about-wrapper .img {
         display: none; }
-      .about .about-wrapper .text .title {
-        margin: 0;
+      .about .about-wrapper .text {
         padding: 0;
-        text-align: center; }
-      .about .about-wrapper .text p {
         margin: 0;
-        padding: 5px 0 5px 0;
-        text-align: center;
-        width: 100%;
-        line-height: 22px;
-        font-size: 18px; }
-      .about .about-wrapper .text .btn {
         width: 100%; }
+        .about .about-wrapper .text .title {
+          margin: 0;
+          padding: 0;
+          text-align: center; }
+        .about .about-wrapper .text p {
+          margin: 0;
+          padding: 5px 0 5px 0;
+          text-align: center;
+          width: 100%;
+          line-height: 22px;
+          font-size: 18px; }
+        .about .about-wrapper .text .btn {
+          width: 100%; }
 
   .info .info-wrapper {
-    grid-template-columns: repeat(3, 31.5%);
+    grid-template-columns: repeat(3, 30%);
     grid-gap: 3%; }
     .info .info-wrapper .item h1 {
       font-size: 60px; }
@@ -660,16 +680,28 @@ footer {
     font-size: 20px; }
 
   .feed .form-wrapper {
-    padding-right: 20px; }
+    padding: 0; }
+    .feed .form-wrapper .form {
+      position: absolute;
+      left: 0;
+      width: 480px; }
+      .feed .form-wrapper .form input {
+        margin-right: 0; }
 
   footer {
     height: auto;
     padding: 10px; }
     footer .wrapper {
-      grid-template-columns: 220px 120px 130px;
-      grid-gap: 20px; }
+      grid-template-columns: 220px;
+      justify-content: center;
+      grid-gap: 6px; }
+      footer .wrapper .nav-one {
+        grid-column-start: 1;
+        grid-column-end: 2; }
       footer .wrapper .nav-two {
-        width: 120px; }
+        width: 120px;
+        grid-column-start: 3;
+        grid-column-end: 4; }
       footer .wrapper .created-by {
         grid-template-columns: 120px 130px; }
         footer .wrapper .created-by p {
@@ -694,50 +726,111 @@ footer {
   .advantages {
     margin-top: 60px; }
     .advantages .title p {
-      font-size: 36px; }
+      font-size: 32px; }
     .advantages .advantages-wrapper {
       grid-template-columns: 200px; }
 
-  .about .about-wrapper {
-    grid-template-columns: 440px;
-    justify-items: center; }
-    .about .about-wrapper p {
-      width: 390px;
-      height: auto; }
-    .about .about-wrapper .btn {
-      width: 300px; }
+  .sentence .title p {
+    font-size: 38px; }
+  .sentence .sentence-wrapper {
+    grid-template-rows: repeat(6, 180px); }
+    .sentence .sentence-wrapper .item {
+      height: 180px; }
+      .sentence .sentence-wrapper .item .container:hover span:first-child {
+        margin-left: 100px;
+        width: 75px; }
+      .sentence .sentence-wrapper .item .container:hover span {
+        left: 10px;
+        top: -80px; }
+        .sentence .sentence-wrapper .item .container:hover span span {
+          margin-left: 10px;
+          display: block; }
+      .sentence .sentence-wrapper .item .container {
+        height: 180px; }
+        .sentence .sentence-wrapper .item .container p {
+          padding-top: 140px; }
 
-  .info {
-    margin-top: 20px; }
-    .info .info-wrapper {
-      grid-template-columns: repeat(3, 30%); }
+  .about .about-wrapper {
+    height: 610px;
+    grid-template-columns: 295px;
+    justify-items: center; }
+    .about .about-wrapper .img {
+      display: none; }
+    .about .about-wrapper .text {
+      padding: 0;
+      margin: 0;
+      width: 100%; }
+
+  .info .info-wrapper {
+    margin-top: 220px;
+    height: 160px;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 150px; }
+    .info .info-wrapper .item {
+      padding-top: 30px; }
       .info .info-wrapper .item h1 {
-        font-size: 32px;
-        width: 135px; }
+        font-size: 18px; }
       .info .info-wrapper .item p {
-        font-size: 20px;
-        width: 135px; }
+        font-size: 14px; }
+
+  .table .lens {
+    font-size: 24px; }
 
   .feed .form-wrapper {
     padding: 0;
     margin: 0;
-    justify-items: right; }
+    height: 100%; }
     .feed .form-wrapper form {
-      margin: 0;
-      opacity: 0.9;
-      width: 80%; }
+      position: absolute;
+      left: 0;
+      opacity: 0.9; }
+      .feed .form-wrapper form .g-recaptcha {
+        width: 286px; }
       .feed .form-wrapper form input {
+        margin-left: 35px;
+        margin-right: 0;
         width: 80%; }
       .feed .form-wrapper form textarea {
-        width: 80%; }
+        width: 80%;
+        margin-left: 35px;
+        margin-right: 0; }
       .feed .form-wrapper form .container {
-        grid-template-columns: 10px 200px 155px; }
+        width: 300px;
+        padding: 0;
+        margin-right: 0;
+        grid-template-columns: 10px 180px 100px;
+        margin-right: 0;
+        justify-content: left;
+        position: relative;
+        left: 0px;
+        overflow: hidden;
+        grid-gap: 5px; }
         .feed .form-wrapper form .container p {
-          width: 200px; }
+          width: 180px; }
+        .feed .form-wrapper form .container input {
+          margin: 0;
+          margin-top: 20px; }
         .feed .form-wrapper form .container .btn {
-          margin: 0; }
+          display: block;
+          margin: 0;
+          width: 100px; }
 
   footer .wrapper {
     grid-template-columns: 220px; } }
+@media screen and (max-width: 320px) {
+  .g-recaptcha {
+    display: none; }
+
+  .feed .form-wrapper form {
+    width: 55%;
+    margin-right: 0; }
+    .feed .form-wrapper form .container {
+      width: 260px;
+      grid-column-gap: 20px;
+      grid-template-columns: 10px 200px;
+      margin-left: 40px; }
+      .feed .form-wrapper form .container .btn {
+        grid-column-start: 1;
+        grid-column-end: 3; } }
 
 /*# sourceMappingURL=index.css.map */

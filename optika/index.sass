@@ -389,7 +389,7 @@ body
         display: grid
         grid-template-columns: 250px 200px 240px
         grid-template-rows: 280px
-        grid-gap: 100px 
+        grid-gap: 35px 
         justify-content: center
         .item  
             padding-top: 50px
@@ -443,17 +443,19 @@ body
             padding-top: 20px
             h1 
                 color: #fff
-                margin: 0 40px 0 40px 
-                
+                margin: 0 40px 0  
+                margin-right: 0 
             input 
-                margin: 0 40px 0 40px 
+                margin: 0 40px 0 
+                margin-right: 0 
                 margin-top: 15px
                 border: 1px solid black
                 border-radius: 2px 
                 width: 475px
                 height: 35px
             textarea
-                margin: 0 40px 0 40px 
+                margin: 0 40px 0  
+                margin-right: 0 
                 margin-top: 15px
                 border: 1px solid black
                 border-radius: 2px
@@ -560,7 +562,7 @@ footer
 @media screen and (max-width: 1024px)
     .header
         
-        width: 882px
+        
 
         .position
             justify-items: right
@@ -569,15 +571,23 @@ footer
             grid-gap: 0px
             .location
                 display: none
+            
     .nav-bar
         max-width: 768px
+
+@media screen and (max-width: 900px) 
+    .header
+        grid-template-columns: minmax(auto ,190px) minmax(auto, 400px)
+        .position
+            .phone 
+                display: none
 
 //advanteges
 @media screen and (max-width: 1024px)
     .advantages
         .title
         .advantages-wrapper
-            grid-template-columns: repeat(4, 200px)
+            grid-template-columns: repeat(2, 200px)
             .item
                 p 
                     margin: 0
@@ -649,11 +659,11 @@ footer
                 max-width: 400px
                 height: auto 
             .text 
-                width: 400px
+                width: 350px
                 p 
                     margin: 0
                     font-size: 16px
-                    width: 400px
+                    width: 350px
 //запрос для table
 @media screen and (max-width: 1024px)
     .table
@@ -675,6 +685,7 @@ footer
             min-width: 940px
         .label
             display: none
+        
   
 //телефон 
 
@@ -715,7 +726,16 @@ footer
                     padding: 10px
                     width: 250px
                     a 
-                        color: #ffffff               
+                        color: #ffffff     
+    .slider
+        grid-template-columns: 40px 370px 40px
+        grid-gap: 6px
+        .gift
+            width: 86%
+            h1 
+                font-size: 28px
+            h2     
+                font-size: 22px     
     .advantages
         .advantages-wrapper
             grid-template-columns: repeat(2, 200px)
@@ -728,17 +748,22 @@ footer
     .about
         height: 500px
         .about-wrapper
-            grid-template-columns: 500px
+            grid-template-columns: 450px
             justify-items: center
             .img
                 display: none
             .text
+                padding: 0
+                margin: 0
+                width: 100%
+
+                
                 .title
                     margin: 0
                     padding: 0
                     text-align: center
                 p 
-                    margin: 0 
+                    margin: 0
                     padding: 5px 0 5px 0 
                     text-align: center
                     width: 100%
@@ -748,7 +773,7 @@ footer
                     width: 100%
     .info
         .info-wrapper
-            grid-template-columns: repeat(3, 31.5%)
+            grid-template-columns: repeat(3, 30%)
             grid-gap: 3%
             .item
                 h1 
@@ -757,16 +782,27 @@ footer
         font-size: 20px     
     .feed
         .form-wrapper
-            padding-right: 20px
+            padding: 0
+            .form 
+                position: absolute
+                left: 0
+                width: 480px
+                input 
+                    margin-right: 0
     footer 
         height: auto
         padding: 10px
         .wrapper
-            grid-template-columns: 220px 120px 130px
-            grid-gap: 20px
-           
+            grid-template-columns: 220px 
+            justify-content: center
+            grid-gap: 6px
+            .nav-one
+                grid-column-start: 1
+                grid-column-end: 2
             .nav-two
                 width: 120px
+                grid-column-start: 3
+                grid-column-end: 4
             .created-by
                 grid-template-columns: 120px 130px
                 p 
@@ -791,56 +827,126 @@ footer
         margin-top: 60px
         .title
             p  
-                font-size: 36px
+                font-size: 32px
         .advantages-wrapper
             grid-template-columns: 200px
-    .about 
-        .about-wrapper
-            
-            grid-template-columns: 440px
-            justify-items: center
-            p 
-                width: 390px
-                height: auto
-            .btn 
-                width: 300px
-    .info
-        margin-top: 20px
-        .info-wrapper
-            grid-template-columns: repeat(3, 30%)
+
+    .sentence
+        .title
+            p
+                font-size: 38px
+        .sentence-wrapper
+            grid-template-rows: repeat(6, 180px)
             .item
+                height: 180px
+                .container:hover
+                    span:first-child
+                        margin-left: 100px
+                        width: 75px
+                    span 
+                        left: 10px
+                        top: -80px
+                        span
+                            margin-left: 10px
+                            display: block 
+                .container
+                    height: 180px
+                    p 
+                        padding-top: 140px           
+    .about
+        .about-wrapper
+            height: 610px
+            grid-template-columns: 295px
+            justify-items: center
+            
+            .img
+                display: none
+            .text
+                padding: 0
+                margin: 0
+                width: 100%         
+    .info
+        
+        .info-wrapper
+            margin-top: 220px
+            height: 160px
+            grid-template-columns: repeat(3, 30%)
+            grid-template-rows: 150px
+            .item
+                padding-top: 30px
+                
                 h1 
-                    font-size: 32px
-                    width: 135px
+                    font-size: 18px
+                    
                 p 
-                    font-size: 20px
-                    width: 135px
+                    font-size: 14px
+    .table
+        .lens
+            font-size: 24px      
     .feed
+        
         .form-wrapper
             padding: 0
             margin: 0
-            justify-items: right
+            height: 100%
+            
             form
-                margin: 0
+                position: absolute
+                left: 0
                 opacity: 0.9
-                width: 80%
+                
+                .g-recaptcha
+                    width: 286px
+
                 input 
+                    margin-left: 35px
+                    margin-right: 0
                     width: 80%
                 textarea
                     width: 80%
+                    margin-left: 35px
+                    margin-right: 0
                 .container
-                    grid-template-columns: 10px 200px 155px
+                    width: 300px
+                    padding: 0
+                    margin-right:  0
+                    grid-template-columns: 10px 180px 100px
+                    margin-right: 0
+                    justify-content: left
+                    position: relative
+                    left: 0px
+                    overflow: hidden
+                    grid-gap: 5px
                     p 
-                        width: 200px
-                    .btn
+                        width: 180px
+                    input 
                         margin: 0
+                        margin-top: 20px
+                    .btn
+                        display: block
+                        margin: 0
+                        width: 100px
+  
     footer 
         .wrapper
             grid-template-columns: 220px
-                        
 
-                
-
+@media screen and (max-width: 320px)
+    .g-recaptcha
+        display: none
+    .feed 
+        .form-wrapper
+            form 
+                width: 55%
+                margin-right: 0
+                .container 
+                    width: 260px
+                    grid-column-gap: 20px
+                    grid-template-columns: 10px 200px
+                    margin-left: 40px
+                    .btn 
+                        grid-column-start: 1
+                        grid-column-end: 3
                 
             
 
