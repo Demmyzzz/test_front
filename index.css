@@ -550,8 +550,10 @@ footer {
   .header {
     width: 1100px; }
 
-  .slider .container {
-    top: -230px; }
+  .slider {
+    height: 500px; }
+    .slider .container {
+      top: -230px; }
 
   .sentence .sentence-wrapper .item .container:hover {
     height: 281px; }
@@ -585,12 +587,10 @@ footer {
     .nav-bar .drop .menu {
       grid-template-columns: 0.7fr 1.2fr 1.5fr 1.6fr 1.5fr 0.75fr; } }
 @media screen and (min-width: 1024px) {
-  .slider {
-    height: 400px; }
-    .slider .container {
-      grid-template-columns: 40px 800px 40px; }
-      .slider .container .gift {
-        width: 800px; } }
+  .slider .container {
+    grid-template-columns: 40px 800px 40px; }
+    .slider .container .gift {
+      width: 800px; } }
 @media screen and (max-width: 1024px) {
   .advantages .advantages-wrapper {
     grid-template-columns: repeat(2, 200px); }
