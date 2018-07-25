@@ -1,0 +1,1092 @@
+//переменные
+    
+$green: #1a9f29
+$Noto: "Noto Serif"
+
+body
+    margin: 0
+    padding: 0
+
+//блок header
+// - logo ( логотип + название )
+// - text ( блок с ссылками на ?категории? )
+// - position ( расположение блоков location + phone )
+//   - location ( ?адреса? )
+//   - phone ( ?номер телефона? )
+
+.header 
+    width: 58.85%
+    display: grid
+    grid-template-columns: minmax(auto ,190px) minmax(auto, 400px) minmax(auto, 290px)
+    grid-template-rows: 45px
+    grid-column-gap: 25px
+    border-bottom: 1px solid $green
+    margin: 20px auto
+    margin-bottom: 0
+    height: 45px
+    padding-bottom: 20px
+    justify-content: space-around
+    .logo
+        display: grid
+        grid-template-columns: 50px 140px
+        height: 45px
+        span 
+            height: 45px    
+            img 
+                width: 45px
+                height: 45px                 
+        p
+            padding: 7px
+            margin: 0
+            width: 130px
+            height: 23px
+            color: #1a9f29
+            font-family: $Noto
+            font-size: 30px
+            font-weight: 700
+            text-transform: uppercase
+    .text
+        grid-gap: 250px
+        height: 35px
+        width: 360px
+        padding: 5px 0 5px 0
+        ul 
+            margin: 0
+            padding: 0
+            display: grid
+            grid-template-columns: repeat(3, 145px)
+            li:first-child
+                list-style: none
+            li 
+                color: $green
+                padding: 0
+                margin: 0
+               
+                a 
+                    color: #555555
+                    text-decoration: none
+    .position
+        display: grid
+        grid-template-columns: 120px 150px
+        grid-gap: 20px
+
+        .location
+            display: grid
+            grid-template-columns: 20px 100px
+            img 
+                padding-top: 15px
+                height: 15px
+                width: 20px
+                padding-right: 7px
+            a 
+                padding-top: 15px
+                width: 98px
+                height: 16px
+                color: #555555
+                font-family: Roboto
+                font-size: 16px
+                font-weight: 300
+                text-decoration: underline
+        .phone
+            display: grid
+            grid-template-columns: 20px 130px
+            grid-template-rows: 20px
+            padding-top: 15px
+            img 
+                height: 20px
+                width: 20px
+                padding-right: 7px
+            a   
+                text-decoration: none
+                width: 139px
+                height: 17px
+                color: #555555
+                font-family: Roboto
+                font-size: 16px
+                font-weight: 700
+                font-family: "Roboto Light"
+                font-weight: 300
+                font-family: Roboto
+                font-weight: 700
+
+// блок nav-bar ( меню )
+
+.nav-bar
+    width: 1130px
+    margin: 0 auto
+    .drop
+        ul 
+            display: grid
+            grid-template-columns: 0.7fr 1.2fr 1.5fr 1.6fr 1.5fr 0.75fr
+            li
+                
+                justify-items: center
+                list-style: none
+                a:hover 
+                    color: #7445a0
+                a 
+                    text-decoration: none
+                    color: black
+                    width: 1055px
+                    height: 17px
+                    color: #555555
+                    font-family: "Noto Serif"
+                    font-size: 18px
+                    font-weight: 700
+                    line-height: 20px
+                    color: #555555
+    .btn
+        width: 100%
+        background-color: #fff
+        color: black
+        position: absolute
+        border-top: 1px solid $green
+        border-bottom: 1px solid $green
+        padding-top: 10px
+        padding-bottom: 10px
+        text-align: center
+        margin-bottom: 10px
+        font-size: 24px
+        color: #555555
+        font-weight: 700
+        display: none
+
+// slider (coomig soon)
+// не работающий слайдер с одной картинкой 
+// и не работабщими кнопками (
+// блок arrow это кнопки на слайдере 
+// блок box точки с низу слайдера показывающие позицию
+// блок gift текст на слайдере
+
+.slider
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
+    margin-right: 0
+    img 
+        max-width: 100%
+        height: auto
+        margin: 0 auto
+    .container
+        width: 100%
+        position: relative
+        top: -280px
+        overflow: hidden
+        left: 0
+        display: grid
+        grid-template-columns: 40px 940px 40px
+        grid-template-rows: 180px
+        justify-content: space-between
+        .label
+            position: absolute
+            top: 580px
+            left: 650px
+            .box:hover
+                background-color: #555555
+            .box
+                position: relative
+                display: inline-block 
+                background-color: #fff
+                height: 10px
+                width: 10px
+                border-radius: 50%
+        .left:hover
+            background-color: #fff
+            .arrow
+                border-left: 2px solid $green
+                border-top: 2px solid $green
+        .left 
+            border-radius: 50%
+            height: 40px
+            width: 40px
+            background-color: $green
+        
+            .arrow     
+                position: relative 
+                left: 15px
+                top: 13px 
+                border-left: 2px solid #fff
+                border-top: 2px solid #fff
+                height: 13px
+                width: 13px
+                transform: rotate(-45deg)
+
+        .right:hover
+            background-color: #fff
+            .arrow
+                border-right: 2px solid $green
+                border-bottom: 2px solid $green
+        .right 
+            border-radius: 50%
+            height: 40px
+            width: 40px
+            background-color: $green
+
+            .arrow     
+                position: relative 
+                left: 10px
+                top: 12px 
+                border-right: 2px solid #fff
+                border-bottom: 2px solid #fff
+                height: 13px
+                width: 13px
+                transform: rotate(-45deg) 
+        .box
+            width: 7px
+            height: 7px
+        .gift
+             
+            display: grid
+            justify-items: center
+            width: 940px
+            height: 175px
+            background-color: #7445a0
+            opacity: 0.8
+            
+        
+            h2:first-child 
+                margin: 0
+                padding: 0
+                color: #ffffff
+                font-family: $Noto
+                font-size: 24px
+                font-weight: 700
+            h2
+                padding: 0
+                margin: 0
+                color: #fff
+                font-family: $Noto
+                font-size: 24px
+                text-transform: uppercase
+                line-height: 60px
+            h1 
+                margin: 0
+                padding: 0
+                color: #fff
+                font-family: $Noto
+                line-height: 60px
+                font-size: 48px
+
+//блок advantages ( преимущевства )
+
+
+    
+.advantages
+    .title
+        p
+            text-align: center
+            color: #555555
+            font-family: "Noto Serif"
+            font-size: 48px
+            font-weight: 700
+    .advantages-wrapper
+        display: grid
+        grid-template-columns: repeat(4, 200px)
+        grid-gap: 45px
+        justify-content: center
+        .item
+            p 
+                color: #555555
+                font-family: Roboto
+                font-size: 18px
+                font-weight: 700
+                line-height: 36px
+                text-align: center
+            img    
+                padding-left: 25px
+                height: 150px
+                width: 150px11
+
+//блок sentence ( предложения )
+//
+
+.sentence
+    width: 100%
+    margin: 0 auto
+    .title
+        p 
+            text-align: center
+            color: #555555
+            font-family: "Noto Serif"
+            font-size: 48px
+            font-weight: 700
+    .sentence-wrapper
+        display: grid
+        grid-template-columns: repeat(3, 33.33%)
+        grid-template-rows: repeat(2, auto)
+        .item
+            box-shadow: inset 0px -48px 110px #555555
+            background-size: 100%
+            background-repeat: no-repeat
+            .container:hover
+                background-color: black
+                opacity: .8
+                overflow: hidden
+                p
+                    position: relative
+                    left: -9999px
+                    overflow: hidden
+                span:first-child
+                    font-size: 24px
+                    margin-left: 100px
+                    border-bottom: 2px solid #ffffff
+                    color: #ffffff
+                    margin-bottom: 5px
+                    width: 75px
+                span 
+                    font-size: 18px
+                    position: relative
+                    left: 80px
+                    top: -250px
+                    color: black
+                    span
+                        margin-left: 40px
+                        display: block 
+                        color: #ffffff      
+            .container
+                overflow: hidden
+                height: 400px
+                span 
+                    position: relative
+                    left: -9999px
+                    color: #ffffff
+                    font-family: Roboto
+                    font-size: 16px
+                    font-weight: 400
+                    line-height: 24px
+                p 
+                    margin: 0
+                    text-align: center
+                    padding: 10em 0
+
+                    color: #ffffff
+                    font-family: $Noto
+                    font-size: 30px
+                    font-weight: 700
+
+// блок about ( о нас )
+
+.about 
+    max-width: 1366px
+    height: 595px
+    margin: 0 auto
+    .about-wrapper
+        margin-top: 95px
+        height: 500px
+        display: grid
+        justify-content: center
+        grid-gap: 80px
+        grid-template-columns: 460px 520px
+        .img   
+            height: auto
+            width: 460px
+        .text 
+            .title
+                p
+                    margin: 0
+                    color: #555555
+                    font-family: $Noto
+                    font-size: 48px
+                    font-weight: 700
+                    height: 35px
+            p 
+                color: #555555
+                font-family: Roboto
+                font-weight: 400
+                /* Style for "Мы любим с" */
+                width: 512px
+                
+                font-size: 24px
+                line-height: 36px
+            .btn
+                width: 220px
+                height: 60px
+                background-color: $green
+                color: #ffffff
+                text-decoration: none
+                border: none
+                border-radius: 5px
+
+// блок info ( немного инфы и компании )
+
+.info
+    background-size: cover
+    width: 100%
+    margin: 0 auto
+    .info-wrapper
+        height: 280px
+        display: grid
+        grid-template-columns: 250px 200px 240px
+        grid-template-rows: 280px
+ 
+        justify-content: space-evenly
+        .item  
+            padding-top: 50px
+            h1 
+                margin: 0
+                text-align: center
+                color: #7445a0
+                font-family: "Noto Serif"
+                font-size: 80px
+                font-weight: 700
+                /* Style for "17 лет" */
+
+                height: 58px
+                
+                font-family: $Noto
+                font-size: 80px
+                font-weight: 700
+            p
+                text-align: center
+                color: #555555
+                font-family: Roboto
+                font-size: 24px
+                font-weight: 700
+                /* Style for "наша компа" */
+                line-height: 36px
+
+//блок table ( блок с каринкой на фоне и текстом )
+
+.table
+    width: 100%
+    margin: 0 auto
+    .wrapper
+        img 
+            width: 100%
+    p 
+        text-align: center
+        margin: 0
+        color: #555555
+        font-family: Roboto
+        font-size: 37px
+        font-weight: 700
+        text-transform: uppercase
+
+
+
+//блок feed ( блок обратной связи )
+//включает форму для заполнения и капча 
+
+.feed
+    width: 100%
+    margin: 0 auto
+    height: 100%
+    .form-wrapper
+        margin-top: 130px
+        padding-right: 150px
+        padding-top: 40px
+        padding-bottom: 40px
+        display: grid
+        grid-template-columns: 555px
+        grid-template-rows: 590px
+        justify-content: right
+        form 
+            width: 555px
+            background-color: #7445a0
+            opacity: 0.8
+           
+            h1 
+                margin: 0 40px 0  
+                margin-right: 0 
+                margin-top: 40px
+                margin-bottom: 30px
+                /* Style for "Задайте во" */
+                color: #fffefe
+                font-family: $Noto
+                font-size: 48px
+                font-weight: 700
+                opacity: 1
+            input 
+                margin: 0 40px 0 
+                margin-right: 0px
+                margin-top: 15px
+                border: 1px solid black
+                border-radius: 2px 
+                width: 475px
+                height: 40px
+            textarea
+                margin: 0 40px 0  
+                margin-right: 0 
+                margin-top: 15px
+                border: 1px solid black
+                border-radius: 2px
+                width: 470px
+                height: 135px
+            .container
+                margin-top: 25px
+                width: 400px
+                display: grid
+                grid-template-columns: 10px 250px 155px
+                justify-items: center
+                margin-left: 40px
+                grid-gap: 10px
+                .btn
+                    width: 155px
+                    height: 45px
+                    border: none
+                    border-radius: 2px
+                    background-color: $green
+                    color: #fffefe
+                    font-family: Roboto
+                    font-size: 18px
+                    font-weight: 400
+                    line-height: 22px
+                    margin-left: 80px
+                p 
+                    margin: 0
+                    width: 250px
+                    color: #ffffff
+                
+                    
+
+//блок footer ( ?подвал? сайта )
+
+footer 
+    margin: 0 auto
+    width: 100%
+    height: 200px
+    background-color: #c8c8c8
+    .wrapper
+        padding-top: 45px
+        display: grid
+        grid-template-columns: 220px 120px 130px 240px
+        justify-content: space-around
+        .about-us
+            .logo
+                display: grid
+                grid-template-columns: 50px 140px
+                height: 45px
+                span 
+                    height: 45px    
+                    img 
+                        width: 45px
+                        height: 45px                 
+                p
+                    padding: 7px
+                    margin: 0
+                    width: 130px
+                    height: 23px
+                    color: #1a9f29
+                    font-family: $Noto
+                    font-size: 30px
+                    font-weight: 700
+                    text-transform: uppercase
+            ul 
+                padding: 0
+                margin: 0
+                margin-top: 5px
+                li 
+                    list-style: none
+                    color: #555555
+                    a:last-child
+                        text-decoration: underline
+                    a 
+                        text-decoration: none
+                        color: #555555
+        .nav-one
+            ul 
+                margin: 0
+                padding: 0
+                li 
+                    list-style: none
+                    a 
+                        color: #555555
+        .nav-two
+            ul
+                margin: 0
+                padding: 0
+                li 
+                    list-style: none
+                    a 
+                        color: #555555
+        .created-by
+            display: grid
+            grid-template-columns: 120px 40px 100px
+            grid-template-rows: 50px
+            p 
+                width: 120px
+                color: #555555
+                margin: 0
+            .container
+                display: grid
+                grid-template-columns: 50px auto
+                img 
+                    line-height: 1.5em
+
+@media screen and (max-width: 1366px)
+    .header
+        width: 1100px
+    .slider 
+        .container
+            top: -230px
+    .sentence
+        .sentence-wrapper
+            .item 
+                .container:hover
+                    height: 281px
+                    span 
+                        top: -80px
+                        left: 40px
+                        
+                        span
+                            margin-left: 40px
+                            display: block 
+                            color: #ffffff               
+                .container
+                    height: 281px
+                    p 
+                        padding: 7.5em 0 0 0
+    .feed
+        .form-wrapper 
+            form 
+                .container
+                    input
+                        margin-left: 0
+                        
+//header
+@media screen and (max-width: 1024px)
+    .header
+        width: 100%
+        .position
+            justify-items: right
+            display: grid
+            grid-template-columns: 160px
+            grid-gap: 0px
+            .location
+                display: none  
+    .nav-bar
+        max-width: 768px
+        .drop 
+            .menu
+                grid-template-columns: 0.7fr 1.2fr 1.5fr 1.6fr 1.5fr 0.75fr
+
+
+@media screen and (min-width: 1024px)
+    .slider
+        height: 400px
+        .container
+            grid-template-columns: 40px 800px 40px
+            .gift
+                width: 800px
+
+//advanteges
+@media screen and (max-width: 1024px)
+    .advantages
+        .title
+        .advantages-wrapper
+            grid-template-columns: repeat(2, 200px)
+            .item
+                p 
+                    margin: 0
+                    width: 200px
+                    color: #555555
+                    font-family: Roboto
+                    font-size: 18px
+                img    
+                    height: 150px
+                    width: 150px
+//sentenc
+@media screen and (max-width: 1024px)
+    .sentence
+        .sentence-wrapper
+            display: grid
+            grid-template-columns: repeat(2, 50%)
+            grid-template-rows: repeat(3, 281px)
+            .item
+                .container:hover
+                    p
+                        position: relative
+                        left: -9999px
+                        overflow: hidden
+                    span:first-child
+                        font-size: 20px
+                        margin-left: 100px
+                        border-bottom: 2px solid #ffffff
+                        color: #ffffff
+                        margin-bottom: 5px
+                        width: 65px
+                    span 
+                        font-size: 18px
+                        position: relative
+                        left: 33px
+                        top: -95px
+                        span
+                            margin-left: 40px
+                            display: block       
+                .container
+                    height: 281px
+                    overflow: hidden
+                    span 
+                        position: relative
+                        left: -9999px
+                        color: #ffffff
+                        font-family: Roboto
+                        font-size: 16px
+                        font-weight: 400
+                        line-height: 24px
+                p 
+                    margin: 0
+                    padding-top: 226px
+                    text-align: center
+
+                    height: 55px
+                    color: #ffffff
+                    font-family: "Noto Serif"
+                    font-size: 30px
+                    font-weight: 700
+//запрос для about
+@media screen and (max-width: 1024px)
+    .about 
+        max-width: 1000px
+        .about-wrapper
+            grid-template-columns: 400px 350px
+            grid-gap: 10px
+            .img   
+                background-size: 100%  
+                max-width: 400px
+                height: auto 
+            .text 
+                width: 350px
+                p 
+                    margin: 0
+                    font-size: 21px
+                    width: 350px
+//запрос для table
+@media screen and (max-width: 1024px)
+    .table
+        .wrapper
+            p 
+                text-align: center
+                margin: 0
+                color: #555555
+                font-family: Roboto
+                font-size: 37px
+                font-weight: 700
+                text-transform: uppercase
+
+//запрос для slider          
+@media screen and (max-width: 1024px)
+    .slider
+        img                 
+            background-size: cover
+            height: auto
+        .label
+            display: none
+
+@media screen and (max-width: 900px) 
+    .header
+        grid-template-columns: minmax(auto ,190px) minmax(auto, 400px)
+        .position
+            .phone 
+                display: none
+     
+@media screen and (max-width: 768px)
+    html 
+        padding: 0
+        margin: 0
+    body 
+        margin: 0 
+        padding: 0
+    .header
+        width: 100%
+        grid-template-columns: 190px 
+        justify-content: center
+        border: none
+        
+        .logo
+            
+        .text
+            display: none
+        .position
+            display: none
+    .nav-bar
+        .btn
+            display: block
+        .drop
+            ul 
+                margin: 0
+                padding: 0
+                position: absolute
+                top: 0
+                left: 0
+                display: none
+                li                   
+                    margin: 1px
+                    background-color: #555555
+                    padding: 10px
+                    width: 250px
+                    a 
+                        color: #ffffff     
+    .slider
+        height: 300px
+        img    
+            width: 100%
+            max-width: 768px
+            height: 100%
+            
+
+        .container
+            grid-template-columns: 40px auto 40px
+            grid-gap: 6px
+            top: -190px
+            .gift
+                width: 490px
+                height: 160px
+                display: grid
+                grid-template-rows: repeat(3, 50px) 
+                h2:first-child 
+                    margin: 0
+                    padding: 0
+                    color: #ffffff
+                    font-family: $Noto
+                    font-size: 18px
+                    font-weight: 700
+                h2
+                    padding: 0
+                    margin: 0
+                    color: #fff
+                    font-family: $Noto
+                    font-size: 18px
+                    text-transform: uppercase
+                    
+                h1 
+                    margin: 0
+                    padding: 0
+                    color: #fff
+                    font-family: $Noto
+                    
+                    font-size: 28px
+
+    .advantages
+        .advantages-wrapper
+            grid-template-columns: repeat(2, 200px)
+
+    .sentence
+        .sentence-wrapper
+            display: grid
+            grid-template-columns: repeat(1, 100%)
+            grid-template-rows: repeat(6, 281px)
+    .about
+        height: 260px
+        .about-wrapper
+            grid-template-columns: 450px
+            justify-items: center
+            .img
+                display: none
+            .text
+                padding: 0
+                margin: 0
+                width: 100%
+
+                
+                .title
+                    margin: 0
+                    padding: 0
+                    text-align: center
+                p 
+                    margin: 0
+                    padding: 5px 0 5px 0 
+                    text-align: center
+                    width: 100%
+                    line-height: 22px
+                    font-size: 18px
+                .btn
+                    width: 100%
+    .info
+        .info-wrapper
+            grid-template-columns: repeat(3, 30%)
+            grid-gap: 3%
+            .item
+                h1 
+                    font-size: 46px
+                
+    .lens
+        font-size: 20px     
+    .feed
+        .form-wrapper
+            padding: 0
+            .form 
+                position: absolute
+                left: 0
+                width: 480px
+                input 
+                    margin-right: 0
+    footer 
+        height: auto
+        
+        .wrapper
+            grid-template-columns: 220px 
+            justify-content: center
+            grid-gap: 6px
+            .nav-one
+                grid-column-start: 1
+                grid-column-end: 2
+            .nav-two
+                width: 120px
+                grid-column-start: 3
+                grid-column-end: 4
+            .created-by
+                grid-template-columns: 120px 130px
+                p 
+                    line-height: 2.5em
+                .container
+                    display: grid
+                    grid-template-columns: 40px 90px
+                    a 
+                        line-height: 2.5em
+
+@media screen and (max-width: 480px)
+    #menu 
+        width: 400px
+        overflow: hidden
+        top: 140px
+        li
+            width: 250px
+            overflow: hidden
+    .slider
+        display: none
+    .advantages
+        margin-top: 60px
+        .title
+            p  
+                font-size: 32px
+        .advantages-wrapper
+            grid-template-columns: 200px
+
+    .sentence
+        .title
+            p
+                font-size: 38px
+        .sentence-wrapper
+            grid-template-rows: repeat(6, 180px)
+            .item
+                height: 180px
+                .container:hover
+                    height: 180px
+                    span:first-child
+                        margin-left: 100px
+                        width: 75px
+                    span 
+                        left: 40px
+                        top: -80px
+                        span
+                            margin-left: 10px
+                            display: block 
+                .container
+                    height: 180px
+                    p 
+                        padding-top: 140px           
+    .about
+        .about-wrapper
+            height: 350px
+            grid-template-columns: 295px
+            justify-items: center
+            
+            .img
+                display: none
+            .text
+                padding: 0
+                margin: 0
+                width: 100%         
+    .info
+        
+        .info-wrapper
+            margin-top: 80px
+            margin-bottom: 20px
+            height: 160px
+            grid-template-columns: repeat(3, 33.33%)
+            grid-template-rows: 150px
+            grid-gap: 0
+            .item
+                padding-top: 30px
+                h1 
+                margin: 0
+                text-align: center
+                color: #7445a0
+                font-family: "Noto Serif"
+                
+                
+                /* Style for "17 лет" */
+
+                
+                
+                font-family: $Noto
+                font-size: 20px
+                
+                p
+                    text-align: center
+                    color: #555555
+                    font-family: Roboto
+                    font-size: 17px
+                    font-weight: 700
+                    /* Style for "наша компа" */
+                    
+    .table
+        .lens
+            font-size: 24px      
+    .feed
+        
+        .form-wrapper
+            padding: 0
+            margin: 0
+            height: 100%
+            
+            form
+                position: absolute
+                left: 0
+                opacity: 0.9
+                width: 100%
+                .g-recaptcha
+                    width: 286px
+
+                input 
+                    margin-left: 35px
+                    margin-right: 0
+                    width: 70%    
+                textarea
+                    width: 69%
+                    margin-left: 35px
+                    margin-right: 0
+                .container
+                    width: 300px
+                    padding: 0
+                    margin-right:  0
+                    grid-template-columns: 10px 180px 100px
+                    margin-right: 0
+                    justify-content: left
+                    position: relative
+                    left: 0px
+                    overflow: hidden
+                    grid-gap: 5px
+                    p 
+                        width: 180px
+                    input 
+                        margin: 0
+                        margin-top: 20px
+                    .btn
+                        display: block
+                        margin: 0
+                        width: 100px
+  
+    footer 
+        .wrapper
+            grid-template-columns: 220px
+
+@media screen and (max-width: 320px)
+    .g-recaptcha
+        display: none
+    .feed 
+        .form-wrapper
+            form 
+                width: 55%
+                margin-right: 0
+                .container 
+                    width: 260px
+                    grid-column-gap: 20px
+                    grid-template-columns: 10px 200px
+                    margin-left: 40px
+                    .btn 
+                        grid-column-start: 1
+                        grid-column-end: 3
+                
